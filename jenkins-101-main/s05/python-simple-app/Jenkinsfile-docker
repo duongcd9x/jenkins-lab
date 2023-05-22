@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pip3 install -r s05/python-simple-app/requirements.txt'
+                sh 'pip3 install -r jenkins-101-main/s05/python-simple-app/requirements.txt'
             }
         }
 
         stage('run') {
             steps {
-                sh 'python3 s05/python-simple-app/app.py &'
+                sh 'python3 jenkins-101-main/s05/python-simple-app/app.py &'
             }
         }
     }
